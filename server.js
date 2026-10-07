@@ -7,6 +7,9 @@ const PORT = process.env.PORT || 3000;
 // Allow the server to receive JSON data
 app.use(express.json());
 
+// Allow the server to receive normal HTML form data
+app.use(express.urlencoded({ extended: true }));
+
 // Test route
 app.get("/", (req, res) => {
     res.json({
