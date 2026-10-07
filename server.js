@@ -21,11 +21,12 @@ app.get("/", (req, res) => {
 // Contact form endpoint
 app.post("/api/contact", (req, res) => {
 
-    const { name, email, message } = req.body;
+    const { name, email, subject, message } = req.body;
 
     console.log("New message received:");
     console.log("Name:", name);
     console.log("Email:", email);
+    console.log("Subject:", subject);
     console.log("Message:", message);
 
     res.json({
